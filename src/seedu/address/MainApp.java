@@ -7,6 +7,7 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
@@ -52,8 +53,15 @@ public class MainApp extends Application {
         this.primaryStage.setTitle("AddressApp");
 
         initRootLayout();
+        setApplicationIcon(primaryStage);
 
         showPersonOverview();
+    }
+
+    private void setApplicationIcon(Stage primaryStage) {
+        // set icon
+        primaryStage.getIcons().add(new Image("seedu/address/res/icons/appIcon.png"));
+        primaryStage.show();
     }
 
     /**
